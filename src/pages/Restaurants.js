@@ -1,6 +1,6 @@
 import React from "react";
-import Busqueda from "./Components/Busqueda";
-import PanelFiltros from "./Components/PanelFiltros";
+import Busqueda from "../components/SearchBar";
+import PanelFiltros from "../components/RestaurantList";
 
 
 export default function Pagina(props) {

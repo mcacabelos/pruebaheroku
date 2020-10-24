@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
-import Pagina from './pages/PagRestaurantes/Pagina'
+import Pagina from './pages/Restaurants'
 
 
 
