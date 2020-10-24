@@ -6,8 +6,12 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+<<<<<<< HEAD
 import Pagina from './pages/PagRestaurantes/Pagina'
 import "./App.css";
+=======
+import Pagina from './pages/Restaurants'
+>>>>>>> f219745afd079f5d5cebf0d8e5f54ae4362cec6f
 
 
 
