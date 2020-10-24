@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import './assets/sass/main.scss';
-
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Pagina from './pages/PagRestaurantes/Pagina'
+import "./App.css";
 
 
 
