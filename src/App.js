@@ -6,30 +6,24 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
-<<<<<<< HEAD
-import Pagina from './pages/PagRestaurantes/Pagina'
+import Restaurants from './pages/Restaurants'
 import "./App.css";
-=======
-import Pagina from './pages/Restaurants'
->>>>>>> f219745afd079f5d5cebf0d8e5f54ae4362cec6f
-
-
 
 function App() {
-  const [navbarVisibility, setNavbarVisibility] = useState(true);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
   
-  function handleNavbarVisibility(){
-    setNavbarVisibility(false);
+  function handleUserLogin(){
+    setUserLoggedIn(false);
   }
 
   return (
     <div className="App">
       <Router>
-        <Navbar isNavbarVisible={navbarVisibility}/>
+        <Navbar isNavbarVisible={handleUserLogin}/>
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/reservas" render={(props) => <Pagina setNavbar={handleNavbarVisibility}/>} />
+        <Route exact path="/reservas" render={(props) => <Restaurants setNavbar={handleUserLogin}/>} />
         <Footer />
       </Router>
     </div>
