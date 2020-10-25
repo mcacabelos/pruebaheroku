@@ -1,10 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import FiltrosComidas from "./FiltrosComidas";
-import Card from "./Card";
+import FiltrosComidas from "./FoodFilter";
+import FoodCard from "./FoodCard";
 import Typography from "@material-ui/core/Typography";
 import Boton from "./Boton";
+import menuList from "../MenuList"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,10 +21,9 @@ export default function CenteredGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={5}>
-        <Grid item xs={3}>
-          <br />
-          <br />
+      <Grid container spacing={5} >
+        <Grid item xs={12} sm={3}>
+
           <Typography
             gutterBottom
             style={{
@@ -38,41 +38,32 @@ export default function CenteredGrid() {
           </Typography>
           <FiltrosComidas />
         </Grid>
-        <Grid item xs={3}>
-          <Typography
-            gutterBottom
-            style={{
-              color: "#16817A",
-              fontFamily: "Montserrat",
-              fontWeight: "Bold"
-            }}
-            variant="h3"
-            component="h2"
-          >
-            Platos
-          </Typography>
-          <Card />
-          <br />
-          <br />
-          <br />
-          <Card />
+        <Grid item xs={12} sm={6}>
+
+          <Grid container spacing={5}>
+            <Grid item xs={12}>
+              <Typography
+                gutterBottom
+                style={{
+                  color: "#16817A",
+                  fontFamily: "Montserrat",
+                  fontWeight: "Bold"
+                }}
+                variant="h3"
+                component="h2"
+              >
+                Platos
+              </Typography>
+            </Grid>
+            {menuList.map((value) => {
+              return <FoodCard 
+                      name= {value.name}
+                      image= {value.img}
+                      price= {value.price}
+                    />})}
+          </Grid>
         </Grid>
         <Grid item xs={3}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <Card />
-          <br />
-          <br />
-          <br />
-          <Card />
-        </Grid>
-        <Grid item xs={3}>
-          <br />
-          <br />
-          <br />
-          <br />
           <Typography
             gutterBottom
             style={{
@@ -85,9 +76,11 @@ export default function CenteredGrid() {
           >
             ¡Armá tu Mesa!
           </Typography>
-          <Boton />
+          <Boton name="Go"/>
         </Grid>
       </Grid>
     </div>
   );
 }
+
+

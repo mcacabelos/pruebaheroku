@@ -39,7 +39,7 @@ export default function CheckboxLabels() {
             name="checkedA"
           />
         }
-        label="Pizzas"
+        label="Veggie"
       />
       <FormControlLabel
         control={
@@ -49,7 +49,7 @@ export default function CheckboxLabels() {
             name="checkedB"
           />
         }
-        label="Pastas"
+        label="Descuentos"
       />
       <FormControlLabel
         control={
@@ -59,7 +59,7 @@ export default function CheckboxLabels() {
             name="checkedC"
           />
         }
-        label="Sushi"
+        label="Celiacos"
       />
       <FormControlLabel
         control={
@@ -79,7 +79,7 @@ export default function CheckboxLabels() {
             name="checkedE"
           />
         }
-        label="Milanesas"
+        label="Pizzas"
       />
       <FormControlLabel
         control={
@@ -89,7 +89,7 @@ export default function CheckboxLabels() {
             name="checkedF"
           />
         }
-        label="Veggie"
+        label="Papas"
       />
     </FormGroup>
   );

@@ -9,6 +9,9 @@ import Restaurants from './pages/Restaurants';
 import "./App.css";
 import UserNavbar from './components/UserNavbar.js';
 import HomeNavbar from './components/HomeNavbar.js';
+import { RestaurantMenu } from '@material-ui/icons';
+import Menu from "./pages/RestaurantMenu"
+import ConfirmationPage from "./pages/ConfirmationPage"
 
 function App() {
   const [userLoggedIn, setUserLoggedIn] = useState(true);
@@ -24,7 +27,9 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/reservas" render={(props) => <Restaurants setNavbar={handleUserLogin}/>} />
+        <Route exact path="/restaurantList" render={(props) => <Restaurants setNavbar={handleUserLogin}/>} />
+        <Route exact path="/restaurantMenu" render={(props) => <Menu setNavbar={handleUserLogin}/>} />
+        <Route exact path="/confirmationPage" render={(props) => <ConfirmationPage setNavbar={handleUserLogin}/>} />
         <Footer />
       </Router>
     </div>

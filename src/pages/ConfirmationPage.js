@@ -1,11 +1,13 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import Boton from "./Boton";
-import Logo from "./Logo";
+import Button from "../components/Boton"
+import Logo from "../components/ConfirmationLogo";
 
-export default function Contenido() {
+
+export default function Pagina() {
   return (
-    <div className="App">
+    <div className="Pagina">
+      <div className="App">
       <br />
       <br />
       <Logo />
@@ -37,8 +39,8 @@ export default function Contenido() {
         ¡Te esperamos!
       </Typography>
       <br />
-      <br />
-      <Boton />
+      <Button name="Volver al Menu Principal"/>
+    </div>
     </div>
   );
 }
