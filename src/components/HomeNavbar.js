@@ -16,8 +16,8 @@ function HomeNavbar (props){
     const correctPage = () => {
       return 'none';
     }
-      return (<AppBar position="fixed">
-        <Toolbar className="ToolbarEasyDinner">
+      return (<AppBar position="fixed" style={{boxShadow: "none"}}>
+        <Toolbar className="ToolbarEasyDinner" >
           <Typography variant="subtitle1" style={{ flexGrow: 1, paddingLeft: 10, color: "#16817A" }}>
           ¿Qué vas a comer hoy?
           </Typography>

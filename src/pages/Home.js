@@ -14,8 +14,18 @@ function Home() {
             <img src={logo} alt="Nature" class="responsive" />
             </div>         
             <h1 className="h1home">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget lectus purus. Pellentesque fringilla ultricies venenatis.</h1>
+            <br />
+            <br />
           </div>
         </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
