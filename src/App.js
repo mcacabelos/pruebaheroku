@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/restaurantMenu" component={Menu} />
         <Route exact path="/confirmationPage" component={ConfirmationPage} />
         <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
-        <Route exact path="/AdmDashBoard" component={AdmDashboard} />
+        <Route exact path="/AdmDashboard" component={AdmDashboard} />
         {loginPage ? <Footer /> : null}
       </Router>
     </div>
