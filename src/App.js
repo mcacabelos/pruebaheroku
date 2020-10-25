@@ -16,8 +16,12 @@ import AdmDashboard from "./pages/AdmDashboard"
 function App() {
   const [loginPage, setLoginPage] = useState(true);
 
-  function showingLoginPage(){
-    setLoginPage(!loginPage);
+  function showingLoginPageFalse(){
+    setLoginPage(false);
+  }
+
+  function showingLoginPageTrue(){
+    setLoginPage(true);
   }
 
   return (
@@ -26,8 +30,8 @@ function App() {
         {/* <HomeNavbar isNavbarVisible={userLoggedIn}/> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/login" render={(props) => <Login isFooterVisible={showingLoginPage}/>} />
-        <Route exact path="/restaurantList" render={(props) => <Restaurants isFooterVisible={showingLoginPage}/>} />
+        <Route exact path="/login" render={(props) => <Login isFooterVisible={showingLoginPageFalse}/>} />
+        <Route exact path="/restaurantList" render={(props) => <Restaurants isFooterVisible={showingLoginPageTrue}/>} />
         <Route exact path="/restaurantMenu" component={Menu} />
         <Route exact path="/confirmationPage" component={ConfirmationPage} />
         <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
