@@ -46,9 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function SignIn(props) {
   const classes = useStyles();
-
+  props.isFooterVisible();
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -87,7 +87,7 @@ export default function SignIn() {
             label="Recordarme"
           />
           <Link 
-          className="login-link " to="/reservas">
+          className="login-link " to="/restaurantList">
           <Button
             type="submit"
             fullWidth

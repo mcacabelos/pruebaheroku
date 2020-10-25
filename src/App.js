@@ -14,10 +14,10 @@ import Menu from "./pages/RestaurantMenu"
 import ConfirmationPage from "./pages/ConfirmationPage"
 
 function App() {
-  const [userLoggedIn, setUserLoggedIn] = useState(true);
+  const [loginPage, setLoginPage] = useState(true);
   
-  function handleUserLogin(){
-    setUserLoggedIn(false);
+  function showingLoginPage(){
+    setLoginPage(false);
   }
 
   return (
@@ -26,11 +26,13 @@ function App() {
         {/* <HomeNavbar isNavbarVisible={userLoggedIn}/> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/restaurantList" render={(props) => <Restaurants setNavbar={handleUserLogin}/>} />
-        <Route exact path="/restaurantMenu" render={(props) => <Menu setNavbar={handleUserLogin}/>} />
-        <Route exact path="/confirmationPage" render={(props) => <ConfirmationPage setNavbar={handleUserLogin}/>} />
-        <Footer />
+        <Route exact path="/login" render={(props) => <Login isFooterVisible={showingLoginPage}/>} />
+        <Route exact path="/restaurantList" component={Restaurants} />
+        <Route exact path="/restaurantMenu" component={Menu} />
+        <Route exact path="/confirmationPage" component={ConfirmationPage} />
+        <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
+        <Route exact path="/AdmDashBoard" component={AdmDashboard} />
+        {loginPage ? <Footer /> : null}
       </Router>
     </div>
   );
