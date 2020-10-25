@@ -12,10 +12,12 @@ import HomeNavbar from './components/HomeNavbar.js';
 import { RestaurantMenu } from '@material-ui/icons';
 import Menu from "./pages/RestaurantMenu"
 import ConfirmationPage from "./pages/ConfirmationPage"
+import AdmPrincipal from "./pages/AdmPrincipal"
+import AdmDashboard from "./pages/AdmDashboard"
 
 function App() {
   const [loginPage, setLoginPage] = useState(true);
-  
+
   function showingLoginPage(){
     setLoginPage(false);
   }
