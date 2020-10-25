@@ -21,7 +21,7 @@ function HomeNavbar (props){
           <Typography variant="subtitle1" style={{ flexGrow: 1, paddingLeft: 10, color: "#16817A" }}>
           ¿Qué vas a comer hoy?
           </Typography>
-          <Link className={"login-link " + correctPage()} to="/login">
+          <Link className={"login-link " + correctPage()} to="/login" style={{ textDecoration: 'none' }}>
           <Button
             color="inherit"
             style={{ color: "#16817A", fontWeight: "bold" }}
