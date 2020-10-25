@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from "react-router-dom";
+import Logo from '../assets/img/brand_EasyDinner.png'
 
 // function Copyright() {
 //   return (
@@ -53,9 +54,8 @@ export default function SignIn(props) {
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+          <img src={Logo} />
+       <br />
         <Typography component="h1" variant="h5">
           Ingresar
         </Typography>
@@ -87,7 +87,7 @@ export default function SignIn(props) {
             label="Recordarme"
           />
           <Link 
-          className="login-link " to="/restaurantList">
+          className="login-link " to="/restaurantList" style={{ textDecoration: 'none' }}>
           <Button
             type="submit"
             fullWidth
