@@ -10,6 +10,7 @@ import {
 
 import { Menu } from "@material-ui/icons";
 import PersonIcon from '@material-ui/icons/Person';
+import Logo from '../assets/img/brand_EasyDinner.png'
 
 function UserNavbar (props){
   const userName="Leandro";
@@ -27,18 +28,7 @@ function UserNavbar (props){
             
             {userName}
           </Typography>
-          <Button
-            color="inherit"
-            style={{ color: "#16817A", fontWeight: "bold" }}
-          >
-            Login
-          </Button>
-          <Button
-            color="inherit"
-            style={{ color: "#16817A", fontWeight: "bold" }}
-          >
-            Registrarse
-          </Button>
+          <img src={Logo} />
         </Toolbar>
       </AppBar>
     </div>; 
