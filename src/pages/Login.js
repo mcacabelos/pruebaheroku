@@ -87,7 +87,7 @@ export default function SignIn(props) {
             label="Recordarme"
           />
           <Link 
-          className="login-link " to="/restaurantList">
+          className="login-link " to="/restaurantList" style={{ textDecoration: 'none' }}>
           <Button
             type="submit"
             fullWidth
