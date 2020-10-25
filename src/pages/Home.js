@@ -10,26 +10,17 @@ function Home() {
         <section>
         <HomeNavbar />
           <div className="search-section container">
-           
-           
-           
-              
-          
-            <div className="section-logo">
-          
+          <div className="section-logo">
             <img src={logo} alt="Nature" class="responsive" />
-            
-                
-        
-  
             </div>         
-            
             <h1 className="h1home">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget lectus purus. Pellentesque fringilla ultricies venenatis.</h1>
-        
           </div>
-       
-
         </section>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </section>
     );
 };
