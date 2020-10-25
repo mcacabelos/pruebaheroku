@@ -5,7 +5,7 @@ import HomeNavbar from "../components/HomeNavbar";
 
 
 export default function Pagina(props) {
-  // props.setNavbar();
+  props.isFooterVisible();
   return (
     <div className="Pagina">
     <HomeNavbar />

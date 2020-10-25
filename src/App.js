@@ -7,8 +7,6 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Restaurants from './pages/Restaurants';
 import "./assets/Css/styles.css";
-import UserNavbar from './components/UserNavbar.js';
-import HomeNavbar from './components/HomeNavbar.js';
 import { RestaurantMenu } from '@material-ui/icons';
 import Menu from "./pages/RestaurantMenu"
 import ConfirmationPage from "./pages/ConfirmationPage"
@@ -19,7 +17,7 @@ function App() {
   const [loginPage, setLoginPage] = useState(true);
 
   function showingLoginPage(){
-    setLoginPage(false);
+    setLoginPage(!loginPage);
   }
 
   return (
@@ -29,7 +27,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" render={(props) => <Login isFooterVisible={showingLoginPage}/>} />
-        <Route exact path="/restaurantList" component={Restaurants} />
+        <Route exact path="/restaurantList" render={(props) => <Restaurants isFooterVisible={showingLoginPage}/>} />
         <Route exact path="/restaurantMenu" component={Menu} />
         <Route exact path="/confirmationPage" component={ConfirmationPage} />
         <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
