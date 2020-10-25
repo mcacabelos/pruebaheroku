@@ -5,6 +5,7 @@ import FiltrosComidas from "./FoodFilter";
 import FiltrosUbicacion from "./UbicationFilter";
 import restaurantList from "../ListOfRestaurants"
 import RestaurantCard from "./RestaurantCard"
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,19 +22,54 @@ export default function CenteredGrid() {
   return (
     <div className={classes.root}>
       <Grid container spacing={5}>
-        <Grid item xs={3}>
-          <p className={classes.paragraph}>Filtros</p>
-          <br />
-          Comidas
-          <br />
-          <br />
-          <FiltrosComidas />
-          Ubicación
-          <br />
-          <br />
-          <FiltrosUbicacion />
+        <Grid item xs={12} sm={3}>
+        <Typography
+            gutterBottom
+            style={{
+              color: "#16817A",
+              fontFamily: "Montserrat",
+              fontWeight: "Bold"
+            }}
+            variant="h6"
+            component="h2"
+          >
+            Filtros
+          </Typography>
+            <br />
+            <Typography
+            gutterBottom
+            style={{
+              color: "#16817A",
+              fontFamily: "Montserrat",
+              fontWeight: "Bold"
+            }}
+            variant="h6"
+            component="h2"
+          >
+            Comida
+          </Typography>
+            <br />
+            <br />
+            <FiltrosComidas />
+            <Typography
+            gutterBottom
+            style={{
+              color: "#16817A",
+              fontFamily: "Montserrat",
+              fontWeight: "Bold"
+            }}
+            variant="h6"
+            component="h2"
+          >
+            Ubicacion
+          </Typography>
+            <br />
+            <br />
+            <FiltrosUbicacion />
         </Grid>
-        {restaurantList.map((value) => {
+        <Grid item xs={12} sm={8}>
+          <Grid container spacing={5}>
+            {restaurantList.map((value) => {
           return <RestaurantCard 
             restaurantName = {value.name}
             image = {value.img}
@@ -41,6 +77,8 @@ export default function CenteredGrid() {
             foodType = {value.foodType}
           />
         })}
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );

@@ -1,14 +1,14 @@
 import React from "react";
-import "./styles.css";
-import Box from "./components/Box";
-import Contenido from "./components/Contenido";
+
+import Box from "../components/RestaurantTitle";
+import Menu from "../components/Menu";
 
 export default function Pagina() {
   return (
     <div className="Pagina">
       <Box />
       <br />
-      <Contenido />
+      <Menu />
     </div>
   );
 }

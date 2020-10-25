@@ -5,13 +5,13 @@ import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: "#FA744F",
-    width: 400,
+    width: 300,
     borderRadius: 15,
     fontSize: 20
   }
 }));
 
-export default function Boton() {
+export default function Boton(props) {
   const classes = useStyles();
   return (
     <div>
@@ -24,7 +24,7 @@ export default function Boton() {
         }}
         className={classes.button}
       >
-        Volver al menu principal
+        {props.name}
       </Button>
     </div>
   );

@@ -1,5 +1,5 @@
 const restaurants = [
-    {name: "Bonnie's" , 
+    { name: "Bonnie's" , 
     img: "https://mir-s3-cdn-cf.behance.net/projects/404/bf55b579816381.Y3JvcCw4MDgsNjMyLDAsMA.jpg",
     dir: "Anchorena 2002",
     foodType: "Papas Fritas - Hamburguesas"
