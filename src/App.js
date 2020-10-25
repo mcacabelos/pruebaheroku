@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Restaurants from './pages/Restaurants';
-import "./App.css";
+import "./assets/Css/styles.css";
 import UserNavbar from './components/UserNavbar.js';
 import HomeNavbar from './components/HomeNavbar.js';
 import { RestaurantMenu } from '@material-ui/icons';
