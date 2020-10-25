@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <HomeNavbar isNavbarVisible={userLoggedIn}/>
+        {/* <HomeNavbar isNavbarVisible={userLoggedIn}/> */}
         <Route exact path="/" component={Home} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />

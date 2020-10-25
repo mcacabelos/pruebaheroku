@@ -43,7 +43,11 @@
 }
 
 .search-section {
-  margin-top:70px;
+  margin-top:63px;
   background-color: #f79071;
   width: 100%;
+}
+
+body {
+  margin:0;
 }

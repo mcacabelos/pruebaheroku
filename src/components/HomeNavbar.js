@@ -16,8 +16,7 @@ function HomeNavbar (props){
     const correctPage = () => {
       return 'none';
     }
-    if(props.isNavbarVisible) {return <div>
-      <AppBar position="fixed">
+      return (<AppBar position="fixed">
         <Toolbar className="ToolbarEasyDinner">
           <Typography variant="subtitle1" style={{ flexGrow: 1, paddingLeft: 10, color: "#16817A" }}>
           ¿Qué vas a comer hoy?
@@ -35,9 +34,7 @@ function HomeNavbar (props){
             Registrarse
           </Button>
         </Toolbar>
-      </AppBar>
-    </div>; 
-    } else return null; 
+      </AppBar>)
 }
 
 export default HomeNavbar;

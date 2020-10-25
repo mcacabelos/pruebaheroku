@@ -1,12 +1,14 @@
 import React from "react";
-
+import HomeNavbar from "../components/HomeNavbar";
 import logo from '../assets/img/logo-test.png';
 
 function Home() {
 
     return (
+      
       <section>
         <section>
+        <HomeNavbar />
           <div className="search-section container">
            
            
