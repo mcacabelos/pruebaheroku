@@ -18,16 +18,21 @@ export default function Deposits() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Deposits</Title>
-      <Typography component="p" variant="h4">
-        $3,024.00
+      <Typography component="p" variant="h6" style={{ color: "#16817A", fontFamily: "Montserrat"}}>
+      Ganancias Brutas
       </Typography>
+
+      <Typography component="p" variant="h4" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}>
+        $278.500,98
+      </Typography>
+
       <Typography color="textSecondary" className={classes.depositContext}>
-        on 15 March, 2019
+        al 25 de Octubre, 2020
       </Typography>
+
       <div>
-        <Link color="primary" href="#" onClick={preventDefault}>
-          View balance
+        <Link color="primary" href="#" onClick={preventDefault} >
+          Ver detalle pedidos
         </Link>
       </div>
     </React.Fragment>

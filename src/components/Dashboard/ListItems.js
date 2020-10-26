@@ -3,68 +3,54 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import PersonIcon from '@material-ui/icons/Person';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import SettingsIcon from '@material-ui/icons/Settings';
+import StorageIcon from '@material-ui/icons/Storage';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+
+
 
 export const mainListItems = (
   <div>
     <ListItem button>
       <ListItemIcon>
+        <PersonIcon />
+      </ListItemIcon>
+      <ListItemText primary="Mi Perfil" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}/>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <CalendarTodayIcon />
+      </ListItemIcon>
+      <ListItemText primary="Reservas" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}/>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <SettingsIcon />
+      </ListItemIcon>
+      <ListItemText primary="Configuración" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}/>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <StorageIcon />
+      </ListItemIcon>
+      <ListItemText primary="Detalle productos" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}/>
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+      <ListItemText primary="Dashboard Financiero" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}/>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <ExitToAppIcon />
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="Cerrar Sesión" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}/>
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem>
-  </div>
-);
 
-export const secondaryListItems = (
-  <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Current month" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Last quarter" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
-    </ListItem>
   </div>
 );
