@@ -6,6 +6,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles({
     root: {
@@ -21,9 +23,13 @@ function RestaurantCard (props){
 
     const classes = useStyles();
 
+
+
     return (
 
-        <Grid item xs={12} sm={6} md={3}>
+        
+    <Grid item xs={12} sm={6} md={3}>
+        <Link style={{ textDecoration: 'none'}} to="/restaurantMenu">
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -44,7 +50,9 @@ function RestaurantCard (props){
                     </CardContent>
                 </CardActionArea>
             </Card>
-        </Grid>
+        </Link>
+
+    </Grid>
 
     );
 

@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Valoracion from "./Valoracion";
 import Grid from "@material-ui/core/Grid";
 
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 375,
@@ -21,9 +22,12 @@ const useStyles = makeStyles({
 export default function MediaCard(props) {
   const classes = useStyles();
 
+
+
+
   return (
   <Grid item xs={12} sm={6}>
-    <Card className={classes.root}>
+    <Card className={classes.root} onClick={props.handleClick(props.index)}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -58,6 +62,7 @@ export default function MediaCard(props) {
         </CardContent>
       </CardActionArea>
     </Card>
+
   </Grid>
     
   );
