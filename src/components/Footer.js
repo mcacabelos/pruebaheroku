@@ -1,7 +1,7 @@
-import Facebook from '../assets/img/facebook.png';
-import Instagram from '../assets/img/instagram.png';
-import Twitter from '../assets/img/twitter.png';
-import Youtube from '../assets/img/youtube.png';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,7 +19,6 @@ function Copyright() {
         Easy Dinner
       </Link>{' '}
       {new Date().getFullYear()}
-      {'.'}
     </Typography>
   );
 }
@@ -52,12 +51,13 @@ export default function StickyFooter() {
       <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">¡Visitanos en nuestras redes sociales!</Typography>
           <Typography variant="body1">
-            <img src={Facebook} className="footerSocialIcons" />
-            <img src={Instagram} className="footerSocialIcons" />
-            <img src={Twitter}  className="footerSocialIcons" />
-            <img src={Youtube} className="footerSocialIcons" />
+            <FacebookIcon fontSize="large" />
+            <InstagramIcon fontSize="large"/>
+            <TwitterIcon fontSize="large"/>
+            <YouTubeIcon fontSize="large"/>
+            <LinkedIn fontSize="large"/>
+            <br />
           </Typography>
           <Copyright />
         </Container>
