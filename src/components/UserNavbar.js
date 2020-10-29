@@ -10,7 +10,7 @@ import {
 
 import { Menu } from "@material-ui/icons";
 import PersonIcon from '@material-ui/icons/Person';
-import Logo from '../assets/img/brand_EasyDinner.png'
+import LogoCompleto from '../assets/img/logo-test.png'
 
 function UserNavbar (props){
   const userName="Leandro";
@@ -28,7 +28,9 @@ function UserNavbar (props){
             
             {userName}
           </Typography>
-          <img src={Logo} />
+          <Link className={"login-link " + correctPage()} to="/restaurantList" style={{ textDecoration: 'none' }}>
+          <img src={LogoCompleto} className="logoNavbar"/>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>; 
