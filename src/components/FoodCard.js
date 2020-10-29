@@ -5,8 +5,9 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Valoracion from "./Valoracion";
+// import Valoracion from "./Valoracion";
 import Grid from "@material-ui/core/Grid";
+import Rating from "@material-ui/lab/Rating";
 
 
 const useStyles = makeStyles({
@@ -58,7 +59,7 @@ export default function MediaCard(props) {
           >
             ${props.price}
           </Typography>
-          <Valoracion />
+          <Rating name="pristine" value="3.5" precision={0.5} />
         </CardContent>
       </CardActionArea>
     </Card>
