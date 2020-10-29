@@ -1,6 +1,7 @@
 import React from "react";
 import HomeNavbar from "../components/HomeNavbar";
 import logo from '../assets/img/logo-test.png';
+import HomeCosas from "../components/HomeCosas";
 
 function Home() {
 
@@ -18,19 +19,7 @@ function Home() {
             <br />
           </div>
         </section>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <HomeCosas/>
       </section>
     );
 };
