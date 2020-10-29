@@ -12,7 +12,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundSize: "cover",
     display: "flex",
-    position: "relative"
+    position: "relative",
+    marginTop: 64,
   },
 
   StarIcon: {

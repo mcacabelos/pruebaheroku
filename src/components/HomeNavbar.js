@@ -8,11 +8,8 @@ import {
   Button
 } from "@material-ui/core";
 
-import { Menu } from "@material-ui/icons";
-import PersonIcon from '@material-ui/icons/Person';
 
 function HomeNavbar (props){
-  const userName="Leandro";
     const correctPage = () => {
       return 'none';
     }

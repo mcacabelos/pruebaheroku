@@ -67,8 +67,6 @@ const handleClose = () => {
             gutterBottom
             style={{
               color: "#16817A",
-              fontFamily: "Montserrat",
-              fontWeight: "Bold"
             }}
             variant="h6"
             component="h2"
@@ -85,8 +83,6 @@ const handleClose = () => {
                 gutterBottom
                 style={{
                   color: "#16817A",
-                  fontFamily: "Montserrat",
-                  fontWeight: "Bold"
                 }}
                 variant="h3"
                 component="h2"
@@ -110,8 +106,6 @@ const handleClose = () => {
             gutterBottom
             style={{
               color: "#16817A",
-              fontFamily: "Montserrat",
-              fontWeight: "Bold"
             }}
             variant="h3"
             component="h2"
@@ -140,8 +134,6 @@ const handleClose = () => {
                 gutterBottom
                 style={{
                   color: "#16817A",
-                  fontFamily: "Montserrat",
-                  fontWeight: "Bold"
                 }}
                 variant="h3"
                 component="h2"
@@ -160,8 +152,6 @@ const handleClose = () => {
                 style={{
                   textAlignLast:"center",
                   color: "#535050",
-                  fontFamily: "Montserrat",
-                  fontWeight: "Bold",
                 }}
                 variant="p"
                 component="p"

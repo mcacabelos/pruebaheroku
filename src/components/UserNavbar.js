@@ -17,7 +17,7 @@ function UserNavbar (props){
     const correctPage = () => {
       return 'none';
     }
-    if(props.isNavbarVisible) {return <div>
+    return <div>
       <AppBar>
         <Toolbar className="ToolbarEasyDinner">
           <IconButton color="inherit" edge="start" aria-label="menu">
@@ -32,7 +32,6 @@ function UserNavbar (props){
         </Toolbar>
       </AppBar>
     </div>; 
-    } else return null; 
 }
 
 export default UserNavbar;
