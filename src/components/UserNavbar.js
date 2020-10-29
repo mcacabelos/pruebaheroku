@@ -5,15 +5,12 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Button,
 } from "@material-ui/core";
 
 import { Menu } from "@material-ui/icons";
 import PersonIcon from "@material-ui/icons/Person";
 import LogoCompleto from "../assets/img/logo-test.png";
 import {
-  CssBaseline,
-  Divider,
   Drawer,
   List,
   ListItem,
@@ -21,7 +18,23 @@ import {
   ListItemText,
 } from "@material-ui/core";
 
-import { ChevronLeft, ListAlt, Person, PostAddOutlined } from '@material-ui/icons';
+import {
+  ChevronLeft,
+  Person,
+} from "@material-ui/icons";
+
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
+
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  paper: {
+    background: "white",
+    color: "black",
+    boxShadow: "300ms",
+  },
+});
 
 function UserNavbar(props) {
   const userName = "Leandro";
@@ -38,6 +51,9 @@ function UserNavbar(props) {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const styles = useStyles();
+
   return (
     <div>
       <AppBar>
@@ -63,14 +79,47 @@ function UserNavbar(props) {
           </Link>
         </Toolbar>
       </AppBar>
-      <Drawer variant="persistent" anchor="left" open={open}>
+      <Drawer
+        classes={{ paper: styles.paper }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
         <div className="drawer-header">
-          <IconButton onClick={handleDrawerClose}>
+          <IconButton
+            onClick={handleDrawerClose}
+            edge="false"
+            style={{ marginLeft: 200, marginTop: 10 }}
+          >
             <ChevronLeft />
           </IconButton>
         </div>
-        <Divider />
         <List>
+          <ListItem
+            button
+            component={Link}
+            to="/"
+            key="nueva"
+            onClick={handleDrawerClose}
+          >
+            <ListItemIcon>
+              <PlaylistAddCheckIcon />
+            </ListItemIcon>
+            <ListItemText primary="Mis pedidos" />
+          </ListItem>
+          
+          <ListItem
+            button
+            component={Link}
+            to="/"
+            key="perfil"
+            onClick={handleDrawerClose}
+          >
+            <ListItemIcon>
+              <Person />
+            </ListItemIcon>
+            <ListItemText primary="Mi Perfil" />
+          </ListItem>
           <ListItem
             button
             component={Link}
@@ -79,45 +128,9 @@ function UserNavbar(props) {
             onClick={handleDrawerClose}
           >
             <ListItemIcon>
-              <Person />
+              <ExitToAppIcon />
             </ListItemIcon>
             <ListItemText primary="Cerrar Sesion" />
-          </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/encuesta/0"
-            key="nueva"
-            onClick={handleDrawerClose}
-          >
-            <ListItemIcon>
-              <PostAddOutlined />
-            </ListItemIcon>
-            <ListItemText primary="Crear nueva encuesta" />
-          </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/encuestas"
-            key="encuestas"
-            onClick={handleDrawerClose}
-          >
-            <ListItemIcon>
-              <ListAlt />
-            </ListItemIcon>
-            <ListItemText primary="Encuestas creadas" />
-          </ListItem>
-          <ListItem
-            button
-            component={Link}
-            to="/perfil"
-            key="perfil"
-            onClick={handleDrawerClose}
-          >
-            <ListItemIcon>
-              <Person />
-            </ListItemIcon>
-            <ListItemText primary="Mi Perfil" />
           </ListItem>
         </List>
       </Drawer>
