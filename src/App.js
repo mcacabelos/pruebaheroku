@@ -12,6 +12,7 @@ import Menu from "./pages/RestaurantMenu"
 import ConfirmationPage from "./pages/ConfirmationPage"
 import AdmPrincipal from "./pages/AdmPrincipal"
 import AdmDashboard from "./pages/AdmDashboard"
+import NewTable from "./pages/NewTable"
 
 function App() {
   const [loginPage, setLoginPage] = useState(true);
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/confirmationPage" component={ConfirmationPage} />
         <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
         <Route exact path="/AdmDashboard" component={AdmDashboard} />
+        <Route exact path="/NewTable" component={NewTable} />
         {loginPage ? <Footer /> : null}
       </Router>
     </div>
