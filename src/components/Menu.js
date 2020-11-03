@@ -16,6 +16,7 @@ import FoodFilter from "./FoodFilter"
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import ItemCarrito from "./ItemCarrito";
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -112,7 +113,8 @@ const handleClose = () => {
           >
             ¡Armá tu Mesa!
           </Typography>
-          <Boton name="Go"/>
+          <Link to="/NewTable" style={{textDecoration:"none"}}><Boton name="Go"/></Link>
+          
           <br />
           {cantItems > 0 &&   <Card className={classes.root}>
                                 <CardContent>

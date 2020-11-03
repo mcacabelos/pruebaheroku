@@ -13,6 +13,7 @@ import ConfirmationPage from "./pages/ConfirmationPage"
 import AdmPrincipal from "./pages/AdmPrincipal"
 import AdmDashboard from "./pages/AdmDashboard"
 import NewTable from "./pages/NewTable"
+import MesaGrupo from "./pages/MesaGrupo"
 
 function App() {
   const [loginPage, setLoginPage] = useState(true);
@@ -38,6 +39,7 @@ function App() {
         <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
         <Route exact path="/AdmDashboard" component={AdmDashboard} />
         <Route exact path="/NewTable" component={NewTable} />
+        <Route exact path="/MesaGrupo" component={MesaGrupo} />
         {loginPage ? <Footer /> : null}
       </Router>
     </div>

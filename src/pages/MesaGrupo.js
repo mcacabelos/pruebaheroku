@@ -6,11 +6,14 @@ import CardMenu from "../components/CardMenu"
 import TotalMesa from "../components/TotalMesa"
 import TituloMesa from "../components/TituloMesa"
 import Grid from '@material-ui/core/Grid';
+import UserNavbar from "../components/UserNavbar";
 
 
 function MesaGrupo() {
     return (
-        <Grid container spacing={2}>
+        <div>
+        <UserNavbar/>
+        <Grid container spacing={2} style={{marginTop:70,}}>
           <Grid item xs={8}>
             <Grid container spacing={2}>
                 <Grid item xs={6}>
@@ -38,6 +41,7 @@ function MesaGrupo() {
             <MesaLinkPaper/>
           </Grid>
         </Grid>  
+        </div>
     );
 };
 
