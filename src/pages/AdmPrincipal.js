@@ -1,7 +1,5 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import Busqueda from "../components/SearchBar";
-import RestaurantList from "../components/RestaurantList";
 import HomeNavbar from "../components/HomeNavbar";
 import Pedidos from '../components/AdmPedidos';
 
