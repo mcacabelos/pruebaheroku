@@ -3,6 +3,8 @@ import { useTheme } from '@material-ui/core/styles';
 import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 
+
+
 // Generate Sales Data
 function createData(time, amount) {
   return { time, amount };
@@ -18,7 +20,10 @@ const data = [
 export default function Chart() {
   const theme = useTheme();
 
+
+
   return (
+
     <React.Fragment>
       <Title>Mes Actual</Title>
       <ResponsiveContainer>
