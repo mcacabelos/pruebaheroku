@@ -24,7 +24,7 @@ import ChartPieMinutas from '../components/Dashboard/ChartPieMinutas';
 import ChartPieBebidas from '../components/Dashboard/ChartPieBebidas';
 import ChartPiePastas from '../components/Dashboard/ChartPiePastas';
 import ChartPieEntradas from '../components/Dashboard/ChartPieEntradas';
-
+import AdmNavbar from "../components/AdmNavbar";
 
 
 const drawerWidth = 240;
@@ -120,8 +120,11 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
+ 
     <div className={classes.root}>
-      <CssBaseline />
+       <AdmNavbar />
+      {/*<CssBaseline /> 
+      
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -157,7 +160,7 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-      </Drawer>
+      </Drawer> */}
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>

@@ -1,22 +1,39 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import HomeNavbar from "../components/HomeNavbar";
+import AdmNavbar from "../components/AdmNavbar";
 import Pedidos from '../components/AdmPedidos';
+import Pedidos2 from '../components/Pedidos2';
+import Button from '@material-ui/core/Button';
+import {
+ 
+  CardTitle,
+  CardSubtitle,
+
+} from 'reactstrap';
 
 
 export default function Pagina(props) {
   // props.setNavbar();
   return (
     <div className="Pagina">
-    <HomeNavbar />
+    <AdmNavbar />
+      <br />
+      <br />
+      <br />
+      <div>
+                        <CardTitle > Reservas</CardTitle>
+                        <CardSubtitle>Listado completo de reservas del día</CardSubtitle>
+                    </div>
+      
+      <Button variant="contained" >Confirmados</Button> &nbsp; 
+      <Button variant="contained" >Pendientes </Button> &nbsp; 
+      <Button variant="contained" >Cancelados</Button>
+      <br />
       <br />
 
-      <Grid item xs={20} sm={20}>
-        <Grid container spacing={0}>
-<Pedidos />
 
-</Grid>
-</Grid>
+       <Pedidos2/>
+
     </div>
   );
 }
