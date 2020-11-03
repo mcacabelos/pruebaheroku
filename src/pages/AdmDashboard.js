@@ -20,6 +20,11 @@ import { mainListItems, secondaryListItems } from '../components/Dashboard/ListI
 import Chart from '../components/Dashboard/Chart';
 import Deposits from '../components/Dashboard/Deposits';
 import Orders from '../components/Dashboard/Orders';
+import ChartPieMinutas from '../components/Dashboard/ChartPieMinutas';
+import ChartPieBebidas from '../components/Dashboard/ChartPieBebidas';
+import ChartPiePastas from '../components/Dashboard/ChartPiePastas';
+import ChartPieEntradas from '../components/Dashboard/ChartPieEntradas';
+
 
 
 const drawerWidth = 240;
@@ -172,6 +177,26 @@ export default function Dashboard() {
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
+
+
+<Container maxWidth="sm">
+  <ChartPieMinutas />
+</Container>
+
+
+<Container maxWidth="sm">
+  <ChartPiePastas />
+</Container>
+
+<Container maxWidth="sm">
+  <ChartPieEntradas />
+</Container>
+
+<Container maxWidth="sm">
+  <ChartPieBebidas />
+</Container>
+
+
                 <Orders />
               </Paper>
             </Grid>

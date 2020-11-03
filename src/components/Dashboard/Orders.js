@@ -8,10 +8,12 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 
+
 // Generate Order Data
 function createData(id, Fecha, Cliente, TipoMesa, tipoPago, montoTotal) {
   return { id, Fecha, Cliente, TipoMesa, tipoPago, montoTotal };
 }
+
 
 const rows = [
   createData(0, '25 Oct, 2020', 'Leandro Pastower', '4 Personas', 'VISA ⠀•••• 3719', 312.44),
@@ -31,11 +33,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function Orders() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Orders</Title>
+      <Title>Órdenes recientes</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
@@ -60,7 +64,7 @@ export default function Orders() {
       </Table>
       <div classCliente={classes.seeMore}>
         <Link color="primary" href="#" onClick={preventDefault}>
-          Ver más ordenes
+          Ver todas las órdenes
         </Link>
       </div>
     </React.Fragment>
