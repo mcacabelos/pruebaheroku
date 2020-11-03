@@ -20,16 +20,9 @@ function MesaGrupo() {
                     <EleccionPago/>
                     <br/>
                     <CardMenu/>
-                    <br/>
-                    <CardMenu/>
                 </Grid>
                 <Grid item xs={6}>
                     <TituloMesa/>
-                    <br/>
-                    <br/>
-                    <CardMenu/>
-                    <br/>
-                    <CardMenu/>
                 </Grid>
             </Grid>
           </Grid>
