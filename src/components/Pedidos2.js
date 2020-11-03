@@ -13,13 +13,22 @@ import { grey, red } from '@material-ui/core/colors';
 const useStyles = makeStyles({
   table: {
     width: "80%", 
-    margin: "0px auto"
+    margin: "0px auto",
+   
+    
+  },
+  tablerow: {
+    '&:hover': {
+      background: "#D3D3D3",
+      borderRadius: 15
+   },
   },
   tableHead: {
-    
+   
     background: " #18817A",
     color:"white"
   },
+
 });
 
 function createData(nombre,Email, Celular, Personas, Horario, Importe, Estado) {
@@ -41,8 +50,8 @@ export default function BasicTable() {
     <TableContainer className={classes.table} component={Paper}>
       <Table  aria-label="simple table">
         <TableHead >
-          <TableRow>
-            <TableCell className={classes.tableHead} align="center">Titular reserva</TableCell>
+          <TableRow >
+            <TableCell className={classes.tableHead} align="center" hover>Titular reserva</TableCell>
             <TableCell className={classes.tableHead} align="center">Email</TableCell>
             <TableCell className={classes.tableHead} align="center">Celular</TableCell>
             <TableCell className={classes.tableHead} align="center">Personas</TableCell>
@@ -51,9 +60,9 @@ export default function BasicTable() {
             <TableCell className={classes.tableHead} align="center">Estado</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody >
           {rows.map((row) => (
-            <TableRow key={row.nombre}>
+            <TableRow className={classes.tablerow} key={row.nombre}>
               <TableCell component="th" scope="row" align="center">
                 {row.nombre}
               </TableCell>
