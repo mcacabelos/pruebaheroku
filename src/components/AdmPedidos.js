@@ -16,14 +16,15 @@ import {
 
 const Pedidos = () => {
     return (
-        <Card>
-            <CardBody>
-                <div className="d-flex align-items-center">
+        
+        <Card classname="card">
+            <CardBody  className="cardbody">
+                <div >
                     <div>
-                        <CardTitle>Reservas</CardTitle>
+                        <CardTitle > Reservas</CardTitle>
                         <CardSubtitle>Listado completo de reservas del día</CardSubtitle>
                     </div>
-                    <div className="ml-auto d-flex no-block align-items-center">
+                    <div className="tipo-reserva">
                         <div className="dl">
                             <Input type="select" className="custom-select">
                                 <option value="0">Todos</option>
@@ -34,9 +35,9 @@ const Pedidos = () => {
                         </div>
                     </div>
                 </div>
-                <Table className="no-wrap v-middle" responsive>
+                <Table >
                     <thead>
-                        <tr className="border-0">
+                        <tr className="border">
                             <th className="border-0">Cliente</th>
                             <th className="border-0">Tipo de mesa</th>
                             <th className="border-0">Estado</th>
