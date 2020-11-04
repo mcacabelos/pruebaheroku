@@ -29,13 +29,13 @@ function MesaLinkPaper() {
                 </Typography>
                 <br/>
                 <Typography variant="h6" style={{ flexGrow: 1, paddingLeft: 10, color: "#535050" }}>
-                        Copia el siguiente link y compartilo con tus amigos
+                        Copia el siguiente código y compartilo con tus amigos
                     </Typography>
                 <br/>
                 <TextField
                    id="outlined-read-only-input"
-                   defaultValue="https://easydinner.com/nfm8na"
-                   style= {{width: 270,}}
+                   defaultValue="6750"
+                   style= {{width: 270, textAlign:"center"}}
                    InputProps={{
                      readOnly: true,
                    }}

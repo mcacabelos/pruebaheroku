@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import Container from "@material-ui/core/Container";
 import CardContent from "@material-ui/core/CardContent";
-import { Typography } from "@material-ui/core";
+import {Typography } from "@material-ui/core";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -20,6 +20,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import hamb from "../assets/img/CheeseBurger.jpg"
 import Select from '@material-ui/core/Select';
 import LocalPizza from '@material-ui/icons/LocalPizza';
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
     container:{
@@ -82,31 +83,7 @@ const peopleOptions = [
 ];
 
 function NewTable (){
-    const [selectedHour, setHour] = React.useState(null);
     const classes = useStyles();
-
-    const [paymentMethod, setPaymentMethod] = React.useState('female');
-
-    const handlePaymentMethod = (event) => {
-    setPaymentMethod(event.target.value);
-    };
-
-    const [anchorHour, setAnchorHour] = React.useState(null);
-    const openHour = Boolean(anchorHour);
-
-
-    const handleClickListHour = (event) => {
-        setAnchorHour(event.currentTarget);
-    };
-
-    const handleClickHour = (event, index) => {
-        setHour(index);
-        setAnchorHour(null);
-    };
-
-    const handleCloseHour = () => {
-        setAnchorHour(null);
-    };
 
     return(
         <div className={classes.fullpage}>
@@ -114,51 +91,6 @@ function NewTable (){
                 <Grid container spacing={5} direction="row">
                     <Grid item xs={12} sm={6}>
                         <Grid container spacing={8}>
-                            <Grid item xs={12}> {/* Card de Horario*/}
-                                    <Card className={classes.card}>
-                                    <CardContent>
-                                        <Typography
-                                                gutterBottom
-                                                className={classes.cardTitle}
-                                                variant="h4"
-                                                component="h4"
-                                            >
-                                                <AccessTimeIcon style={{fontSize:40,}}/> Horario de Reserva
-                                        </Typography>
-                                        <List component="nav" className={classes.hourSelector}>
-                                            <ListItem
-                                            button
-                                            onClick={handleClickListHour}
-                                            >
-                                            <ListItemText className={classes.hourText} primary={selectedHour === null ? "Seleccione un horario" : hourOptions[selectedHour]} />
-                                            </ListItem>
-                                        </List>
-                                        <Menu
-                                            id="long-menu"
-                                            anchorEl={anchorHour}
-                                            keepMounted
-                                            open={openHour}
-                                            onClose={handleCloseHour}
-                                            PaperProps={{
-                                            style: {
-                                                maxHeight: 48 * 4.5,
-                                                width: "60ch"
-                                            }
-                                            }}
-                                        >
-                                        {hourOptions.map((option, index) => (
-                                            <MenuItem
-                                                    key={option}
-                                                    selected={index === selectedHour}
-                                                    onClick={(event) => handleClickHour(event, index)}
-                                            >
-                                            {option}
-                                            </MenuItem>
-                                        ))}
-                                        </Menu>
-                                    </CardContent>
-                                </Card>
-                            </Grid>
                             <Grid item xs={12}>{/* Card de items en la reserva*/}
                                 <Card className={classes.card}>
                                         <CardContent>
@@ -170,17 +102,8 @@ function NewTable (){
                                                 >
                                                     <LocalPizza style={{fontSize:40,}}/> Items
                                             </Typography>
-                                            <Grid container spacing={2}>
+                                            <Grid container spacing={1}>
                                                 <Grid item xs={3}>
-                                                    <FormControl variant= "outlined" className={classes.formControl}>
-                                                    <Select native defaultValue="" id="grouped-native-select">
-                                                        <option value={1}>1</option>
-                                                        <option value={2}>2</option>
-                                                        <option value={3}>3</option>
-                                                    </Select>
-                                                    </FormControl>
-                                                </Grid>
-                                                <Grid item xs={1.5}>
                                                     <Card style={{ height:"60px", width:"60px",}}>
                                                         <CardMedia
                                                         className={classes.media}
@@ -188,22 +111,12 @@ function NewTable (){
                                                         />
                                                     </Card>
                                                 </Grid>
-                                                <Grid item xs={5}>
-                                                    <Typography variant="h6" style={{color: "#535050AB" }}>
+                                                <Grid item xs={9}>
+                                                    <Typography variant="h6" style={{color: "#535050AB", textAlign:"left" }}>
                                                     Classic Cheese Burger
                                                     </Typography>
                                                 </Grid>
-                                                <Grid item xs={2}/>
                                                 <Grid item xs={3}>
-                                                    <FormControl variant= "outlined" className={classes.formControl}>
-                                                    <Select native defaultValue="" id="grouped-native-select">
-                                                        <option value={1}>1</option>
-                                                        <option value={2}>2</option>
-                                                        <option value={3}>3</option>
-                                                        </Select>
-                                                    </FormControl>
-                                                </Grid>
-                                                <Grid item xs={1}>
                                                     <Card style={{ height:"60px", width:"60px",}}>
                                                     <CardMedia
                                                         className={classes.media}
@@ -211,8 +124,8 @@ function NewTable (){
                                                     />
                                                     </Card>
                                                 </Grid>
-                                                <Grid item xs={5}>
-                                                    <Typography variant="h6" style={{color: "#535050AB" }}>
+                                                <Grid item xs={9}>
+                                                    <Typography variant="h6" style={{color: "#535050AB", textAlign:"left" }}>
                                                     Gaseosa 500ml
                                                     </Typography>
                                                 </Grid>
@@ -279,7 +192,9 @@ function NewTable (){
                                                 </Grid>
                                             </Grid>
                                             <br/>
-                                            <Button variant="contained" className={classes.boton} style={{width: 300, backgroundColor: "#16817A",}}>Confirmar Pago</Button>
+                                            <Link to="/confirmationPage" style={{textDecoration:"none"}}>
+                                                <Button variant="contained" className={classes.boton} style={{width: 300, backgroundColor: "#16817A",}}>Confirmar Pago</Button>
+                                            </Link>
                                         </CardContent>
                                     </Card>
                             </Grid>

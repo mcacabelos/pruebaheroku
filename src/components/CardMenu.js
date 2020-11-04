@@ -60,7 +60,7 @@ export default function SimpleCard() {
           </Grid>
           <Grid item xs={4}>
             <Typography variant="h4" style={{paddingLeft: 15,color: "#16817A" }}>
-                Laura
+                TestUser
             </Typography>
           </Grid>
           <Grid item xs={1}/>

@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Button from "../components/Boton"
 import Logo from "../components/ConfirmationLogo";
+import {Link} from "react-router-dom";
 
 
 export default function Pagina() {
@@ -39,7 +40,9 @@ export default function Pagina() {
         ¡Te esperamos!
       </Typography>
       <br />
-      <Button name="Volver al Menu Principal"/>
+      <Link to="/restaurantList" style={{textDecoration:"none"}}>
+        <Button name="Volver al Menu Principal"/>
+      </Link>
     </div>
     </div>
   );

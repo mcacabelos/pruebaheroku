@@ -22,7 +22,7 @@ function MesaLinkPaper() {
         <Card className={classes.root}>
             <CardContent>
                 <Typography variant="h4" style={{color: "#16817A" }}>
-                  Mesa de Laura (4/4)
+                  Mesa de TestUser
                 </Typography>
             </CardContent>
         </Card>

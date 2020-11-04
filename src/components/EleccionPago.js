@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 function MesaLinkPaper() {
     const classes = useStyles();
-    const [currency, setCurrency] = React.useState('EUR');
+    const [currency, setCurrency] = React.useState('Dividimos entre todos');
   
     const handleChange = (event) => {
       setCurrency(event.target.value);
@@ -63,7 +63,7 @@ function MesaLinkPaper() {
                 </TextField>
             </Paper>
         </div>
-       
+
     );
 };
 

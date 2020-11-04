@@ -16,12 +16,12 @@ function MesaGrupo() {
         <Grid container spacing={2} style={{marginTop:70,}}>
           <Grid item xs={8}>
             <Grid container spacing={2}>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <EleccionPago/>
                     <br/>
                     <CardMenu/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <TituloMesa/>
                 </Grid>
             </Grid>

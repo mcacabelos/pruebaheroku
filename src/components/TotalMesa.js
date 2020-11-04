@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Divider from "@material-ui/core/Divider";
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleCard() {
+export default function SimpleCard(props) {
   const classes = useStyles();
 
   return (
@@ -32,51 +34,20 @@ export default function SimpleCard() {
         </Typography>
         <br/>
         <Grid container spacing={3}>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#535050" }}>
-                Laura
+            <Grid item xs={9}>
+            <Typography variant="h4" style={{color: "#535050" , textAlign:"left"}}>
+                Test User
             </Typography>
             </Grid>
-            <Grid item xs={6}/>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#FA744F" }}>
-                $320
-            </Typography>
-            </Grid>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#535050" }}>
-                Laura
-            </Typography>
-            </Grid>
-            <Grid item xs={6}/>
+            
             <Grid item xs={3}>
             <Typography variant="h4" style={{color: "#FA744F" }}>
                 $320
             </Typography>
             </Grid>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#535050" }}>
-                Laura
-            </Typography>
+            <Grid item xs={12}>
+              <Divider />
             </Grid>
-            <Grid item xs={6}/>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#FA744F" }}>
-                $320
-            </Typography>
-            </Grid>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#535050" }}>
-                Laura
-            </Typography>
-            </Grid>
-            <Grid item xs={6}/>
-            <Grid item xs={3}>
-            <Typography variant="h4" style={{color: "#FA744F" }}>
-                $320
-            </Typography>
-            </Grid>
-            <Grid item xs={12}/>
             <Grid item xs={3}>
             <Typography variant="h4" style={{color: "#535050" }}>
                 Total
@@ -85,12 +56,17 @@ export default function SimpleCard() {
             <Grid item xs={6}/>
             <Grid item xs={3}>
             <Typography variant="h4" style={{color: "#FA744F" }}>
-                $1408
+                $320
             </Typography>
             </Grid>
         </Grid>
         <br/>
-        <Button variant="contained" className={classes.boton}>¡Listo!</Button>
+        <Link to="/cobro" style={{textDecoration:"none"}}><Button variant="contained" className={classes.boton} onClick={props.handleClick}>
+            <Typography variant="h6" style={{color: "#FFFFFF", fontWeight:"bold" }}>
+            ¡Confirma tu Reserva!
+            </Typography>
+        </Button></Link>
+        
       </CardContent>
     </Card>
   );

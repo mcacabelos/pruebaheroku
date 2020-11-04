@@ -14,6 +14,7 @@ import AdmPrincipal from "./pages/AdmPrincipal"
 import AdmDashboard from "./pages/AdmDashboard"
 import NewTable from "./pages/NewTable"
 import MesaGrupo from "./pages/MesaGrupo"
+import PantallaCobro from "./pages/PantallaCobro"
 
 function App() {
   const [loginPage, setLoginPage] = useState(true);
@@ -40,6 +41,7 @@ function App() {
         <Route exact path="/AdmDashboard" component={AdmDashboard} />
         <Route exact path="/NewTable" component={NewTable} />
         <Route exact path="/MesaGrupo" component={MesaGrupo} />
+        <Route exact path="/cobro" component={PantallaCobro} />
         {loginPage ? <Footer /> : null}
       </Router>
     </div>

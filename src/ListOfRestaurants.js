@@ -1,18 +1,18 @@
 const restaurants = [
     { name: "Bonnie's" , 
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/bf55b579816381.Y3JvcCw4MDgsNjMyLDAsMA.jpg",
+    img: "https://img.pystatic.com/restaurants/bonnie-s.jpg",
     dir: "Anchorena 2002",
     foodType: "Papas Fritas - Hamburguesas"
     },
 
     {name: "Club de la Milanesa" , 
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/bf55b579816381.Y3JvcCw4MDgsNjMyLDAsMA.jpg",
+    img: "https://img.pystatic.com/restaurants/el-club-de-la-milanesa-logo-sucursales-ar.jpg",
     dir: "Anchorena 2002",
     foodType: "Milanesas - Papas Fritas"
     },
 
     {name: "Fabric Sushi" , 
-    img: "hhttps://img.pystatic.com/home-chains/ar/fabric.png?quality=70&width=200",
+    img: "https://img.pystatic.com/restaurants/logo-fabric-sushi.jpg",
     dir: "Anchorena 2002",
     foodType: "Sushi - Comida Peruana"
     },
@@ -24,7 +24,7 @@ const restaurants = [
     },
 
     {name: "La Mesada" , 
-    img: "https://images.deliveryhero.io/image/pedidosya/restaurants/la-mesada-monserrat-fondo-blanco-logo.jpg?quality=70&width=100",
+    img: "https://img.pystatic.com/restaurants/la-mesada-monserrat-fondo-blanco-logo.jpg",
     dir: "Gallo 1441",
     foodType: "Empanadas - Pizzas"
     },

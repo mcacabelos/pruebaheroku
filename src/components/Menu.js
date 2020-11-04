@@ -19,6 +19,7 @@ import ItemCarrito from "./ItemCarrito";
 import {Link} from "react-router-dom";
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1
@@ -59,6 +60,8 @@ export default function CenteredGrid() {
 const handleClose = () => {
     setOpen(false);
 };
+
+
   return (
     <div className={classes.root}>
       <Grid container spacing={5} >
@@ -88,7 +91,7 @@ const handleClose = () => {
                 variant="h3"
                 component="h2"
               >
-                Platos
+                Menu
               </Typography>
             </Grid>
             {menuList.map((value, index) => {
