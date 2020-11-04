@@ -36,7 +36,7 @@ function createData(nombre,Email, Celular, Personas, Horario, Importe, Estado) {
 }
 
 const rows = [
-  createData('Testuser', "testuser@easydinner", "15-69389806", 1, "12:00", "$320", "Pendiente"),
+  createData('Test user', "testuser@easydinner", "15-69389806", 1, "12:00", "$320", "Pendiente"),
   createData('Martin', "martin@easydinner", "15-48751245", 4, "12:30", "$1559,9", "Confirmada"),
   createData('Pastor',"pastor@easydinner","15-45781245", 1, "11:45", "$999", "Confirmada"),
   createData('Ferri',"falexis@easydinner", "15-68783512",3, "14:00","$799" , "Confirmada"),
