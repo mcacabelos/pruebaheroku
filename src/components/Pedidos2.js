@@ -36,11 +36,12 @@ function createData(nombre,Email, Celular, Personas, Horario, Importe, Estado) {
 }
 
 const rows = [
-  createData('Martin', "juan.perez@gmail.com", "15-69389806", 4, "12:30", "$1559,9", "Confirmada"),
-  createData('Pastor',"juan.perez@gmail.com","15-69389806", 1, "11:45", "$999", "Confirmada"),
-  createData('Ferri',"juan.perez@gmail.com", "15-69389806",3, "14:00","$799" , "Confirmada"),
-  createData('Chelo',"juan.perez@gmail.com", "15-69389806",6, "14:00", "$1299", "Cancelada"),
-  createData('Tomi', "juan.perez@gmail.com","15-69389806",1, "13:30", "$899", "Confirmada"),
+  createData('Testuser', "testuser@easydinner", "15-69389806", 1, "12:00", "$320", "Pendiente"),
+  createData('Martin', "martin@easydinner", "15-48751245", 4, "12:30", "$1559,9", "Confirmada"),
+  createData('Pastor',"pastor@easydinner","15-45781245", 1, "11:45", "$999", "Confirmada"),
+  createData('Ferri',"falexis@easydinner", "15-68783512",3, "14:00","$799" , "Confirmada"),
+  createData('Chelo',"marcelo@easydinner", "15-34157845",6, "14:00", "$1299", "Cancelada"),
+  createData('Tomi', "tomas@easydinner","15-64987748",1, "13:30", "$899", "Confirmada"),
 ];
 //ACA HAY QUE CREAR EL JSON 
 export default function BasicTable() {
