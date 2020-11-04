@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 function MesaLinkPaper() {
     const classes = useStyles();
-    const [currency, setCurrency] = React.useState("Pago todo Yo");
+    const [currency, setCurrency] = React.useState("Pago todo yo");
   
     const handleChange = (event) => {
       setCurrency(event.target.value);
