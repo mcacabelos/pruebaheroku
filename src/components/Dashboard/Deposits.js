@@ -1,8 +1,7 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from './Title';
 
 function preventDefault(event) {
   event.preventDefault();
@@ -23,7 +22,7 @@ export default function Deposits() {
       </Typography>
 
       <Typography component="p" variant="h4" style={{ color: "#16817A", fontFamily: "Montserrat",fontWeight: "bold" }}>
-        $278.500,98
+        $239.290,98
       </Typography>
 
       <Typography color="textSecondary" className={classes.depositContext}>
@@ -31,7 +30,7 @@ export default function Deposits() {
       </Typography>
 
       <div>
-        <Link color="primary" href="#" onClick={preventDefault} >
+        <Link to="/AdmPrincipal" color="primary" href="#">
           Ver detalle pedidos
         </Link>
       </div>

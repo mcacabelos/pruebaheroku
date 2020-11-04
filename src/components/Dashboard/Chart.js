@@ -14,7 +14,7 @@ const data = [
   createData('06-Oct', 186725),
   createData('13-Oct', 167982),
   createData('20-Oct', 132895),
-  createData('27-Oct', 115089),
+  createData('27-Oct', 75879),
 ];
 
 export default function Chart() {
@@ -30,10 +30,10 @@ export default function Chart() {
         <LineChart
           data={data}
           margin={{
-            top: 16,
-            right: 16,
+            top: 8,
+            right: 10,
             bottom: 0,
-            left: 24,
+            left: 10,
           }}
         >
           <XAxis dataKey="time" stroke={theme.palette.text.secondary} />
