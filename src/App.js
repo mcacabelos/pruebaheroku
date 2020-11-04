@@ -37,7 +37,7 @@ function App() {
         <Route exact path="/restaurantList" render={(props) => <Restaurants isFooterVisible={showingLoginPageTrue}/>} />
         <Route exact path="/restaurantMenu" component={Menu} />
         <Route exact path="/confirmationPage" component={ConfirmationPage} />
-        <Route exact path="/AdmPrincipal" component={AdmPrincipal} />
+        <Route exact path="/AdmPrincipal" render={(props) => <AdmPrincipal isFooterVisible={showingLoginPageTrue}/>} />
         <Route exact path="/AdmDashboard" component={AdmDashboard} />
         <Route exact path="/NewTable" component={NewTable} />
         <Route exact path="/MesaGrupo" component={MesaGrupo} />
