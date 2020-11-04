@@ -86,6 +86,12 @@ export default function SignIn(props) {
       userName: "Bonnies",
     };
 
+    let hardcodedCred7 = {
+      email: "testuser@easydinner",
+      password: "password123",
+      userName: "Test User",
+    };
+
     if (
       (emailInput == hardcodedCred1.email &&
         passwordInput == hardcodedCred1.password) ||
@@ -98,7 +104,9 @@ export default function SignIn(props) {
       (emailInput == hardcodedCred5.email &&
         passwordInput == hardcodedCred5.password) ||
       (emailInput == hardcodedCred6.email &&
-        passwordInput == hardcodedCred6.password)
+        passwordInput == hardcodedCred6.password) ||
+        (emailInput == hardcodedCred7.email &&
+          passwordInput == hardcodedCred7.password)
     ) {
       //combination is good. Log them in.
       //this token can be anything. You can use random.org to generate a random string;
@@ -116,7 +124,9 @@ export default function SignIn(props) {
         sessionStorage.setItem("userName", hardcodedCred4.userName);
       } else if (emailInput == hardcodedCred5.email) {
         sessionStorage.setItem("userName", hardcodedCred5.userName);
-      } else sessionStorage.setItem("userName", hardcodedCred6.userName);
+      } else if (emailInput == hardcodedCred6.email) {
+        sessionStorage.setItem("userName", hardcodedCred6.userName);
+      } else sessionStorage.setItem("userName", hardcodedCred7.userName);
 
       if (emailInput == hardcodedCred6.email) {
         history.push("/AdmPrincipal");
