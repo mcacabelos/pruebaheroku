@@ -1,11 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-} from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core";
 
 import { Menu } from "@material-ui/icons";
 import PersonIcon from "@material-ui/icons/Person";
@@ -18,13 +13,10 @@ import {
   ListItemText,
 } from "@material-ui/core";
 
-import {
-  ChevronLeft,
-  Person,
-} from "@material-ui/icons";
+import { ChevronLeft, Person } from "@material-ui/icons";
 
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import PlaylistAddCheckIcon from '@material-ui/icons/PlaylistAddCheck';
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import PlaylistAddCheckIcon from "@material-ui/icons/PlaylistAddCheck";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -37,7 +29,6 @@ const useStyles = makeStyles({
 });
 
 function UserNavbar(props) {
-  const userName = "Leandro";
   const correctPage = () => {
     return "none";
   };
@@ -54,6 +45,24 @@ function UserNavbar(props) {
 
   const styles = useStyles();
 
+  const history = useHistory();
+
+  if (!sessionStorage.getItem("auth-token")) {
+    console.log("no auth token set");
+    history.push("/login");
+  } else {
+    const authToken = "123456abcdef";
+    if (sessionStorage.getItem("auth-token") == authToken) {
+      console.log("good token. Log in.");
+      //do something like redirect to todo page
+    } else {
+      console.log("bad token.");
+      //do something like redirect to login page
+      history.push("/login");
+    }
+  }
+
+
   return (
     <div>
       <AppBar>
@@ -68,7 +77,7 @@ function UserNavbar(props) {
           </IconButton>
           <PersonIcon />
           <Typography variant="h6" style={{ flexGrow: 1, paddingLeft: 10 }}>
-            {userName}
+            {sessionStorage.getItem("userName")}
           </Typography>
           <Link
             className={"login-link " + correctPage()}
@@ -107,7 +116,7 @@ function UserNavbar(props) {
             </ListItemIcon>
             <ListItemText primary="Mis pedidos" />
           </ListItem>
-          
+
           <ListItem
             button
             component={Link}

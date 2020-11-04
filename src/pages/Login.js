@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
@@ -7,8 +6,6 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 //import Link from '@material-ui/core/Link';
 import Grid from "@material-ui/core/Grid";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Link, useHistory } from "react-router-dom";
@@ -56,31 +53,37 @@ export default function SignIn(props) {
     let hardcodedCred1 = {
       email: "leandro@easydinner",
       password: "password123",
+      userName: "Leandro",
     };
 
     let hardcodedCred2 = {
       email: "tomas@easydinner",
       password: "password123",
+      userName: "Tomas",
     };
 
     let hardcodedCred3 = {
       email: "martin@easydinner",
       password: "password123",
+      userName: "Martin",
     };
 
     let hardcodedCred4 = {
       email: "marcelo@easydinner",
       password: "password123",
+      userName: "Marcelo",
     };
 
     let hardcodedCred5 = {
       email: "alexis@easydinner",
       password: "password123",
+      userName: "Alexis",
     };
 
     let hardcodedCred6 = {
       email: "bonnies@easydinner",
       password: "password123",
+      userName: "Bonnies",
     };
 
     if (
@@ -99,8 +102,21 @@ export default function SignIn(props) {
     ) {
       //combination is good. Log them in.
       //this token can be anything. You can use random.org to generate a random string;
+
       const token = "123456abcdef";
       sessionStorage.setItem("auth-token", token);
+
+      if (emailInput == hardcodedCred1.email) {
+        sessionStorage.setItem("userName", hardcodedCred1.userName);
+      } else if (emailInput == hardcodedCred2.email) {
+        sessionStorage.setItem("userName", hardcodedCred2.userName);
+      } else if (emailInput == hardcodedCred3.email) {
+        sessionStorage.setItem("userName", hardcodedCred3.userName);
+      } else if (emailInput == hardcodedCred4.email) {
+        sessionStorage.setItem("userName", hardcodedCred4.userName);
+      } else if (emailInput == hardcodedCred5.email) {
+        sessionStorage.setItem("userName", hardcodedCred5.userName);
+      } else sessionStorage.setItem("userName", hardcodedCred6.userName);
 
       if (emailInput == hardcodedCred6.email) {
         history.push("/AdmPrincipal");
