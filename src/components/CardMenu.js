@@ -58,12 +58,11 @@ export default function SimpleCard() {
           <Grid item xs={1}>
             <Avatar alt="Laura Baker" src={Persona} className={classes.avatar}/>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={5}>
             <Typography variant="h4" style={{paddingLeft: 15,color: "#16817A" }}>
-                TestUser
+                Test User
             </Typography>
           </Grid>
-          <Grid item xs={1}/>
           <Grid item xs={3}>
             <FiberManualRecordIcon style={{color: "#535050"}}/>
             <FiberManualRecordIcon style={{color: "#535050AB"}}/>
