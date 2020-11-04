@@ -3,12 +3,14 @@ import Typography from "@material-ui/core/Typography";
 import Button from "../components/Boton"
 import Logo from "../components/ConfirmationLogo";
 import {Link} from "react-router-dom";
+import UserAppbar from "../components/UserNavbar";
 
 
 export default function Pagina() {
   return (
     <div className="Pagina">
-      <div className="App">
+      <UserAppbar />
+      <div className="App" style={{marginTop:80,}}>
       <br />
       <br />
       <Logo />
