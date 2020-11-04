@@ -16,7 +16,7 @@ function createData(id, Fecha, Cliente, TipoMesa, tipoPago, montoTotal) {
 
 
 const rows = [
-  createData(0, '04 Nov, 2020', 'Test User', '1 Persona', 'VISA ⠀•••• 3719', 320.00),
+  createData(0, '04 Nov, 2020', 'Test User', '1 Persona', 'VISA ⠀•••• 6212', 320.00),
   createData(1, '25 Oct, 2020', 'Tomito Recalt', '2 Personas', 'VISA ⠀•••• 2574', 866.99),
   createData(2, '25 Oct, 2020', 'Tincho Cascabeles', '6 Personas', 'Master ⠀•••• 1253', 100.81),
   createData(3, '25 Oct, 2020', 'Chelito', '10 Personas', 'AMEX ⠀•••• 2000', 654.39),
