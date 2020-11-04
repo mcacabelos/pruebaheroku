@@ -80,7 +80,7 @@ function AdmNavbar(props) {
           </Typography>
           <Link
             className={"login-link " + correctPage()}
-            to="/restaurantList"
+            to="/AdmPrincipal"
             style={{ textDecoration: "none" }}
           >
             <img src={LogoCompleto} className="logoNavbar" />
